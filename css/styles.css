@@ -1,31 +1,53 @@
-
-
+/* Estilo general del body */
 body {
     font-family: Arial, sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: url('img/fondo.jpg'); /* Asegúrate de usar la ruta correcta */
-
+    background: url('img/fondo.jpg') no-repeat center center fixed; /* Cambia 'tu_fondo.jpg' por la ruta de tu imagen */
+    background-size: cover; /* Asegúrate de que la imagen cubra toda la pantalla */
+}
+/* Estilo general del body */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url('img/fondo.jpg') no-repeat center center fixed; /* Imagen de fondo */
+    background-size: cover; /* Asegúrate de que la imagen cubra toda la pantalla */
 }
 
+/* Superposición de degradado */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.7); /* Superposición blanca semitransparente */
+    z-index: -1; /* Colocar detrás del contenido */
+}
+/* Reinicio de márgenes y paddings */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilo general del body */
 body {
     font-family: Arial, sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: url('img/fondo.jpg'); /* Asegúrate de usar la ruta correcta */
-
+    background: linear-gradient(to bottom right, #e3f2fd, #bbdefb); /* Degradado suave de azul claro a azul más oscuro */
 }
 
+/* Contenedor principal */
 .container {
     text-align: center;
     color: black;
@@ -36,34 +58,40 @@ body {
     max-width: 600px;
 }
 
+/* Estilo para el logo */
 .logo {
     width: 100px;
     margin-bottom: 20px;
 }
 
+/* Estilo del título principal */
 h1 {
     font-size: 2.5em;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
+/* Estilo del subtítulo */
 .subtitulo {
     font-size: 1.2em;
     color: #b02b2b;
     margin-bottom: 20px;
 }
 
+/* Estilo para la promoción */
 .prom {
     font-size: 1.5em;
     margin-bottom: 10px;
 }
 
+/* Estilo para los nombres */
 .nombres {
     font-size: 1em;
     color: #555;
     margin-bottom: 20px;
 }
 
+/* Estilo para los botones */
 .buttons {
     display: flex;
     gap: 10px;
@@ -84,7 +112,7 @@ button:hover {
     background-color: #ccc;
 }
 
-/* Estilo para Promociones */
+/* Estilo para las promociones */
 .promociones-title {
     font-size: 1.8em;
     color: #333;
@@ -99,6 +127,7 @@ button:hover {
     margin-bottom: 20px;
 }
 
+/* Estilo para cada ítem de promoción */
 .promo-item {
     background-color: rgba(128, 128, 128, 0.7);
     color: white;
@@ -108,20 +137,21 @@ button:hover {
     text-align: center;
     cursor: pointer;
     transition: background-color 0.3s;
-    width: 150px;
+    width: 150px; /* Ancho fijo para consistencia */
 }
 
 .promo-item:hover {
     background-color: rgba(100, 100, 100, 0.9);
 }
 
+/* Estilo para la imagen de las promociones */
 .promo-img {
     margin-top: 10px;
     width: 100%;
     border-radius: 5px;
 }
 
-/* Notas adicionales */
+/* Estilo para notas adicionales */
 .notas {
     font-size: 1em;
     color: #333;
